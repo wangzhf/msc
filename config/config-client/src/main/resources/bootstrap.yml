@@ -18,7 +18,7 @@ management:
     web:
       exposure:
         # 使用refresh来刷新配置，也可以用*来包含所有
-        include: refresh
+        include: "*"
 eureka:
   client:
     service-url:
