@@ -12,6 +12,7 @@
         <module>webapp</module>
         <module>monitor</module>
         <module>config</module>
+        <module>gateway</module>
     </modules>
     <packaging>pom</packaging>
 

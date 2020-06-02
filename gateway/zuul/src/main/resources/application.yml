@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: msc-gateway-zuul
+server:
+  port: 8888
+
+# 默认会代理eureka上所有注册的服务
+zuul:
+  routes:
+    hello:
+      # 映射
+      # path: /api/**
+      # 指定转发地址
+      # url: http://localhost:9000/user/
+      # 指定转发到服务
+      # serviceId: msc-apis-users
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
