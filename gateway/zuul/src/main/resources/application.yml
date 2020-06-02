@@ -14,6 +14,14 @@ zuul:
       # url: http://localhost:9000/user/
       # 指定转发到服务
       # serviceId: msc-apis-users
+  # 配置失败重试
+  retryable: true
+
+ribbon:
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 0
+
+
 
 eureka:
   client:
