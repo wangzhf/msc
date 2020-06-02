@@ -13,7 +13,24 @@ spring:
           password: abcd
           # Git仓库下的相对地址，可以配置多个，用逗号分隔
           # search-paths: dir
+    # 跟踪总线事件
+    bus:
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
