@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: msc-monitor-zipkin
+  zipkin:
+    enabled: true
+
+server:
+  port: 9020
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
