@@ -1,6 +1,8 @@
 spring:
   application:
     name: msc-apis-users
+  zipkin:
+    base-url: http://localhost:9411
 
 server:
   port: 9000
