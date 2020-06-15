@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: msc-apis-consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        # 注册到Consul的服务名称，客户端根据这个名称来调用
+        service-name: service-producer
+
+server:
+  port: 8501

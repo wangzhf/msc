@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>users</module>
+        <module>consul-demo</module>
     </modules>
 
 

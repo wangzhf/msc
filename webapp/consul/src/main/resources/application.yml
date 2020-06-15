@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: msc-webapp-consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        # 设置不需要注册到consul中
+        register: false
+
+server:
+  port: 8503
+

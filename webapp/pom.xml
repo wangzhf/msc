@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>console</module>
+        <module>consul</module>
     </modules>
 
 
