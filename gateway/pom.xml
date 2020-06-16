@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>zuul</module>
+        <module>scg</module>
     </modules>
 
 </project>

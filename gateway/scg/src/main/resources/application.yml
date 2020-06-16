@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 自定义路由ID，必须唯一
+      - id: neo_route
+        # 目标服务地址
+        uri: http://www.baidu.com
+        # 路由条件，Predicates接受一个输入参数，返回一个布尔值结果，
+        # 该接口包含多种默认方法来将Predicate组合成其他复杂逻辑（比如：与、或、非）
+        predicates:
+        - Path=/spring-cloud
+
+      - id: time_route
+        uri: http://github.com
+        predicates:
+        # 在这时间之后将localhost跳转为上面指定的uri
+        - After=2020-12-16T11:24:06+08:00[Asia/Shanghai]
+
+      - id: cookie_route
+        uri: http://github.com
+        predicates:
+        - Cookie=hello,world
+
+      - id: header_route
+        uri: http://github.com
+        predicates:
+        - Header=X-Request-Id, \d+
+
+      - id: host_route
+        uri: http://github.com
+        predicates:
+          - Host=**.github.com
+
+      - id: path_route
+        uri: http://github.com
+        predicates:
+          - Path=/foo/{segment}
+
+      - id: query_route
+        uri: http://github.com
+        predicates:
+          - Query=smile
